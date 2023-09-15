@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<style>
+ .container{
+    border: 1px solid black;
+ }
+
+ @media screen and (max-width:199px) and (min-width:100px){
+    .hello{
+        color: red;
+
+    }
+    .container{
+        width: 60px;
+        margin: 10px 20px;
+    }
+ }
+
+
+ @media screen and (max-width:300px) and (min-width:200px){
+    .hello{
+        color: blue;
+
+    }
+ }
+
+</style>
+</head>
+<body>
+    <h1 class="hello">Hello</h1>
+</body>
+</html>
