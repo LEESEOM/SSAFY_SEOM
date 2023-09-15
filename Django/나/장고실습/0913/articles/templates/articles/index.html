@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+<h1>인덱스다</h1>
+</div>
+<a href="{% url "articles:catch" name='김싸피' num=100 %}">캐치로 이동</a>
+{% endblock content %}

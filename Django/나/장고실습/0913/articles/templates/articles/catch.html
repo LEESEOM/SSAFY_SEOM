@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div>
+ <h1>CATCH</h1>
+<h3>이름 : {{name}}</h3>
+<h3>나이 : {{num}}</h3>
+</div>
+<a href="{% url "articles:index" %}">인덱스</a>
+{% endblock content %}

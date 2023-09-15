@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <form action="/greeting" method="POST">
+    {% csrf_token %}
+    <!-- 글자 입력받기 -> input type='text'를 이용 -->
+    <!-- 
+    form -> action : 데이터를 전달 받을 목적지 url
+    form -> methods : 데이터 전달 방식 get, post
+    input -> name : 전송되는 데이터의 키 값
+    -->
+    <input type="text" name="username">
+    <!-- 전송 버튼 -->
+    <input type="submit">
+  </form>
+</body>
+</html>
