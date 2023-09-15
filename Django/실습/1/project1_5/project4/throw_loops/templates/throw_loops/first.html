@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% if message is not None %}
+<p>catch! I catch {{message}}</p>
+{% else %}
+<p>catch! I catch nothing!</p>
+{% endif %} 
+<form action="/second/" method="GET">
+<label for="input">throw!</label>
+<input type="text" name="message" id="input">
+<input type="submit" value="휙">
+</form>
+{% endblock content %}

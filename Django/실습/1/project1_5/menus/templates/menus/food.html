@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+{% block content %}
+  {% for menu in food %}
+    <p>{{menu}}</p>
+  {% endfor %}
+  <form action="/receipt/" method="GET">
+    <label for="order">주문란 :</label>
+    <input type="text" name="order" id="order">
+    <input type="submit" value="주문하기">  
+  </form>
+{% endblock content %}
+
