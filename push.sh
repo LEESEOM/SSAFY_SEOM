@@ -1,4 +1,11 @@
 #!/bin/bash
-cd C:\Users\SSAFY\Desktop\seom\SSAFY_SEOM
+# 이 스크립트는 현재 디렉터리에서 Git 저장소로 가정합니다.
+
+# Git 저장소 경로
+git_repo_path="/Users/SSAFY/Desktop/seom/SSAFY_SEOM"
+
+# Git 명령 실행
+cd "$git_repo_path"
 git add .
-git commit -m '2'
+git commit -m '1'
+git push origin main
