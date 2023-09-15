@@ -1,6 +1,6 @@
 #!/bin/bash
 
-git_repo_path="/Users/SSAFY/Desktop/seom/SSAFY_SEOM"
+git_repo_path="/Users/SSAFY/Desktop/SSAFY_SEOM"
 
 cd "$git_repo_path"
 git add .
