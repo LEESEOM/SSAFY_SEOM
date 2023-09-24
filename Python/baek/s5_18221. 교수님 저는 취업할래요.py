@@ -1,31 +1,36 @@
-import math
+n = int(input())
+board = []
+gyu = None
+professor = None
+for i in range(n):
+    temp = list(map(int, input().split()))
+    for j in range(n):
+        if temp[j] == 2:
+            gyu = (i, j)
+        elif temp[j] == 5:
+            professor = (i, j)
+    board.append(temp)
 
-N = int(input())
-info = [list(map(int, input().split())) for _ in range(N)]
-run = True
-# 일단 교수님이랑 성규 자리 찾기
-for row in range(N):
-    for col in range(N):
-        if info[row][col] == 5:
-            a, b = row, col
-        elif info[row][col] == 2:
-            c, d = row, col
-# 거리 5 이상
-if math.sqrt(((a - c)**2)+((b - d)**2)) < 5:
-    run = False
-# 같은 행, 열이면 선분 상 3명
-if a==c or b==d:
-    if abs(a-c) < 5 and abs(b-d) < 5:
-        run = False
-# 아니면 직사각형 내 3명
-else:
+
+def check(x1, y1, x2, y2):
     cnt = 0
-    for row in range():
-        for col in range():
-           if info[row][col] == 1:
+    x_min, x_max = min(x1, x2), max(x1, x2)
+    y_min, y_max = min(y1, y2), max(y1, y2)
+    for y in range(y_min, y_max + 1):
+        for x in range(x_min, x_max + 1):
+            if board[y][x] == 1:
+                cnt += 1
+    if cnt >= 3 and (x1 - x2) ** 2 + (y1 - y2) ** 2 >= 25:
+        if x1 == x2 or y1 == y2:
+            return True
+        else:
+            if (x1 - x2) ** 2 + (y1 - y2) ** 2 >= 25:
+                return True
+    else:
+        return False
 
 
-if run:
-    print('1')
-else:
-    print('0')
+y1, x1 = gyu
+y2, x2 = professor
+answer = check(x1, y1, x2, y2)
+print(int(answer))
