@@ -10,4 +10,5 @@ urlpatterns = [
     path('catch/', views.catch, name='catch'),
     path('hello/<str:name>/', views.greeting, name='greeting'),
     path('<int:pk>/', views.detail, name='detail'),
+    path('new/', views.new, name='new'),
 ]
