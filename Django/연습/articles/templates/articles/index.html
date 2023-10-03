@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Hello, {{ name }}</h1>
+<a href="/dinner/">dinner</a>
+<a href="{% url 'articles:dinner' %}">dinner</a>
+{% endblock content %}
+
+
