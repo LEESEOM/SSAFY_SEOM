@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block style %}
+th{
+    background-color : #f2f2f2;
+    
+}
+th, td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+{% endblock style %}
+
+{% block content %}
+<h1>문제1. 데이터 읽어오기</h1>
+<table>
+    <tr>
+        {% for column in data_frame.columns %}
+            <th>{{ column }} </th>
+        {% endfor %}
+        
+    </tr>
+    <tr>
+        {% for row in data_frame.values %}
+            <tr>
+                {% for value in row %}
+                    <td>{{ value }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </tr>
+</table>
+{% endblock content %}
+
+{% comment %} Pandas 를 사용하여 캐글에서 다운로드 받은 파일을 
+DataFrame 으로 읽어옵니다.
+제공된 스타일을 활용하여 전체 데이터를 표 형태로 출력합니다 {% endcomment %}

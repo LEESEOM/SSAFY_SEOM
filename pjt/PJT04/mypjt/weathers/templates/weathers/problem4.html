@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>문제4. 날씨 이벤트</h1>
+<img src="{{ chart_img }}" alt="">
+{% endblock content  %}
+
+{% comment %} 
+기상 현상의 발생 횟수(“Events” 컬럼)를 히스토그램으로 출력합니다.
+• 사용되는 Events 컬럼은 “결측치” 가 포함되어 있으며, “다중 값을 허용” 합니다.
+• 다중 값은 각 기상 현상의 발생 횟수에 추가하여 계산합니다.
+• ex) “Rain , Thunderstorm” = “Rain + 1, Thunderstorm + 1” 로 계산합니다.
+{% endcomment %}

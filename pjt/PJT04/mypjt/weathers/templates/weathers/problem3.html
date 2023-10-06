@@ -1,0 +1,13 @@
+{% extends "base.html" %}
+
+
+{% block content %}
+<h1>문제3. 월 별 온도 비교</h1>
+<img src="{{ chart_img }}" alt="">
+{% endblock content  %}
+
+{% comment %} 
+월 별 최고, 평균, 최저 온도의 평균을 선 그래프로 시각화 합니다
+• 날짜 필드: 날짜 형식으로 변환하여 사용합니다.
+• 온도 필드: 평균값 계산을 위해 숫자 형식으로 변환하여 사용합니다
+{% endcomment %}
