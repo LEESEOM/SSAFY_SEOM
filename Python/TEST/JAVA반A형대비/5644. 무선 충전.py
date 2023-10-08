@@ -24,17 +24,6 @@ for tc in range(1, T+1):
     charge_a.sort(reverse=True)
     charge_b.sort(reverse=True)
 
-    # 이미 선택한 번호를 저장할 집합
-    selected_numbers = set()
-
-    # 선택된 값들의 합을 저장할 변수
-    total_value = 0
-
-    # 리스트 a와 b에서 번호가 중복되지 않게 값을 선택하면서 합을 최대화
-    for val, num in a + b:
-        if num not in selected_numbers:
-            total_value += val
-            selected_numbers.add(num)
     for i in range(M):
         # a 이동
         if movea[i]== 1:
@@ -70,7 +59,18 @@ for tc in range(1, T+1):
         charge_a.sort(reverse=True)
         charge_b.sort(reverse=True)
 
-
+        # 1) 둘 다 2개 이상 있을 때
+            # 서로의 두번째로 큰 것을 비교
+            # 두번째가 더 큰 쪽에서 가장 큰 걸 선택
+            # 반대쪽에서 가장 큰 것과 같은지 비교하고 다르면 그거 같으면 다음거
+        # 2) 한 쪽만 2개 이상일 때
+            # 2-1) 반대 쪽이 1개일 때
+                # 1개인 쪽을 고르고
+                # 같지 않은 것 중에 제일 큰 거 고르기
+            # 2-2) 반대 쪽이 0개일 때
+                # 그냥 제일 큰거 고르기
+        # 3) 2개 이상인 쪽이 없을 때
+            # 둘다 그냥 고르기
 
 
     # 다 끝나면 총 충전량 출력
