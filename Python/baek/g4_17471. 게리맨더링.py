@@ -15,12 +15,8 @@ tmp1 = []
 tmp2 = []
 temp = [(tmp1, tmp2)]
 
-
-if cnt == 2:
-    poss.append(temp)
-
-
 # bfs로 가다가 연결이 끊기면 되돌아가거나 하는 방법?
+# a,b bfs 둘다 돌려서 확인
 
 
 # 값들 계산하기
