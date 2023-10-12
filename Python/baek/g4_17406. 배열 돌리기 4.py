@@ -1,12 +1,5 @@
 from itertools import permutations
 from copy import deepcopy
-def spin(arr,order):
-    global min_value
-    global info
-    for j in range(len(order):
-        r, s, c = info[order[i][j]][0], info[order[i][j]][1], info[order[i][j]][2]
-
-    return new_arr
 
 
 N, M, K = map(int, input().split())
@@ -21,14 +14,15 @@ orders = list(permutations(lst ,K))
 
 # 회전시키기 > 함수로 만들기
 for i in range(len(orders)):
-    order = orders[i]
     arr = deepcopy(arr_origin)
-    new_arr = spin(arr, order)
-    # 한가지 경우 다 돌았을 때
-    # 그 경우의 배열 최소값을 구하고
+    for j in range(len(orders[i])):
+        order = info[orders[i][j]]
+        arr = spin(arr, order)
+        # 한가지 경우 다 돌았을 때
+        # 그 경우의 배열 최소값을 구하고
     value = float('inf')
     for k in range(N):
-        cnt = sum(new_arr[k])
+        cnt = sum(arr[k])
         if cnt <= value:
             value = cnt
     # 그게 진짜 최소값보다 작으면 갱신
