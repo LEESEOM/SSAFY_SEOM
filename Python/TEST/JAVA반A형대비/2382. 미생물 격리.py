@@ -4,7 +4,7 @@ for tc in range(1, T+1):
     info = [list(map(int, input().split())) for _ in range(K)]
     # 세로, 가로, 미생물, 방향
     # 상1 하2 좌3 우4
-    N = 7
+
     maps = [[None]+[0]*(N-2)+[None] for _ in range(N-2) ]
     maps.insert(0,[None]*N)
     maps.append([None]*N)
