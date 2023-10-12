@@ -5,6 +5,10 @@ for tc in range(1, T+1):
     N, M, K = map(int, input().split())
     info = [list(map(int, input().split())) for _ in range(K)]
     # 상1 하2 좌3 우4
+<<<<<<< HEAD
+=======
+
+>>>>>>> 9d698a8d9dae233be9425989eeb910368d286658
     maps = [[None]+[0]*(N-2)+[None] for _ in range(N-2) ]
     maps.insert(0,[None]*N)
     maps.append([None]*N)
