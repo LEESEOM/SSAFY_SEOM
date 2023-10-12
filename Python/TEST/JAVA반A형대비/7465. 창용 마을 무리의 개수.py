@@ -7,8 +7,8 @@ for tc in range(1, T+1):
     visited = [0]*N
     cnt = 0
     for i in range(M):
-        x, y = map(int, input())
-        arr[x][y] = arr[y][x] = 1
+        x, y = map(int, input().split())
+        arr[x-1][y-1] = arr[y-1][x-1] = 1
     deq = deque()
     for j in range(N):
         if visited[j] == 0:

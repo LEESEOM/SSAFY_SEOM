@@ -8,7 +8,6 @@ def dfs(idx, num):
             min_num = num
         return
 
-
     for i in range(4):
         if info[i] > 0:
             info[i] -= 1
@@ -25,11 +24,13 @@ def dfs(idx, num):
             info[i] += 1
 
 T = int(input())
+INF = float('inf')
 for tc in range(1, T+1):
     N = int(input())
     info = list(map(int, input().split()))
     nums = list(map(int, input().split()))
-    max_num = -100000000
-    min_num = 100000000
+    max_num = -INF
+    min_num = INF
     dfs(0,nums[0])
     print(f'#{tc} {max_num-min_num}')
+
