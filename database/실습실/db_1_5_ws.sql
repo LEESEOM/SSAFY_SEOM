@@ -1,4 +1,0 @@
-SELECT *
-    FROM users
-ORDER BY age
-LIMIT 40, 20;
