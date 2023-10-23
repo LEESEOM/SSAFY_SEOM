@@ -234,17 +234,59 @@ GROUP BY
 
 -- INSERT
 1. 단일 행 삽입하기
+INSERT INTO
+  articles (title, content, createdAt)
+VALUES
+  ('hello', 'world', '2000-01-01'),
+  (DATE());
+  
 2. 여러 행 삽입하기
 
 -- UPDATE
 1. 두번째 행의 이름을 ‘김철수한무두루미’로, 주소를 ‘제주도’로 수정하기
-
+UPDATE
+  articles
+SET
+  행 = '김철수한무두루미',
+  주소 = '제주도'
+LIMIT
+  1,1;
 -- DELETE
 1. 다섯번째 행의 데이터를 삭제하기
+DELETE FROM
+  articles
+LIMIT
+  4,1;
 2. 이름에 ‘영’이 포함되는 데이터 삭제하기
+DELETE FROM
+  articles
+WHERE
+  이름 LIKE '%영%';
 3. 테이블의 모든 데이터 삭제하기
+DELETE FROM
+  articles
+
+DELETE FROM
+  articles
+WHERE id IN (
+  SELECT id FROM articles
+  ORDER BY createdAt
+  LIMIT 2
+  );
 
 *따로 제공된 DB가 없습니다. SQL문을 어떻게 작성할지를 구상해보시면 됩니다.
 -- JOIN
 1. 게시글과 작성된 유저의 이름 정보를 같이 가져오기
+SELECT
+  articles.title, users.name
+FROM
+  articles
+INNER JOIN users
+  ON user.id = articles.userId;
 2. 게시글과 작성된 유저가 일부 삭제된 테이블에서 이름 정보를 같이 가져오기 (이 때에 모든 게시글 레코드는 출력 결과에 포함되어 있어야함)
+SELECT
+  articles.title, users.name
+FROM
+  articles
+LEFT JOIN users
+  ON user.id = articels.userId;

@@ -42,3 +42,8 @@ SELECT e1.name AS '직원명', e2.name AS '상사명', d.name AS '부서명'
     ON e1.deptno = d.deptno;
 
 
+SELECT *
+FROM users
+LEFT JOIN articles
+   ON articles.userID = users.id
+WHERE articles.userId IS NULL;
