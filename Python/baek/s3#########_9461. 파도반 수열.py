@@ -1,6 +1,6 @@
 T = int(input())
 for _ in range(T):
-    N = int(input)
+    N = int(input())
     dp = [0]*(N+1)
     dp[1] = 1
     dp[2] = 2
