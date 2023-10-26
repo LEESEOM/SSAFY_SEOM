@@ -13,13 +13,14 @@
       - `password` 인자의 값의 길이가 8 이상이면 true를 반환한다.
 			- 함수 선언식으로 작성한다.
     */
-    function isValid (word) {
-      if (word.length >= 8) {
+    function isValid (password) {
+      if (password.length >= 8) {
         return true
       } else {
         return false
       }
     }
+    //  return password.length >= 8 ? true : false
     console.log(isValid('password')) // true
     console.log(isValid('pwd')) // false
     /*
@@ -40,7 +41,7 @@
       - 두번째 인자 `size`는 문자열이며, 기본인자는 'regular'이다.
       - 함수는 각 인자를 속성으로 갖는 객체를 반환이다.
     */
-    makeOrder = (menu, size = 'regular') => {
+    const makeOrder = (menu, size = 'regular') => {
       return {
         menu: menu,
         size: size
@@ -55,7 +56,7 @@
     // function celsiusToFahrenheit (celsius) {
     //   return celsius * 9/5 + 32
     // }
-    celsiusToFahrenheit = celsius => celsius * 9/5 + 32
+    const celsiusToFahrenheit = celsius => celsius * 9/5 + 32
     console.log(celsiusToFahrenheit(10))
   </script>
 </body>
