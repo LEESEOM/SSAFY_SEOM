@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <script>
+    console.log('Hi')
+
+    const promise = new Promise((resolve, reject) => {
+    setTimeout(function () {
+      console.log('SSAFY')
+      resolve()
+    }, 3000)
+  })
+// 이게 setTimeout 끝나고 해야하니까 then을 쓰는거
+// 근데 then 쓰려면 위의 것 시간이 다 끝나고 시작하라고 해야하니까
+// 저거 다끝나면 resolve()해서 넘겨줘라 하기
+  promise  
+  .then (() => {
+    // then 다음에 어떻게 표시해야하지?
+    console.log('Bye')
+  })
+  </script>
+</body>
+</html>
