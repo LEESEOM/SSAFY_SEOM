@@ -33,7 +33,6 @@
   const onItemSelect = function(video) {
     selectedVideo.value = video
   }
-
   const selectedVideo = ref(null)
   const keyword = ref('')
   
