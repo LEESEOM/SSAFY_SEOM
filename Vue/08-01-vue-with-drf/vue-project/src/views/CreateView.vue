@@ -31,7 +31,10 @@ const createArticle = function () {
     data: {
       title: title.value,
       content: content.value
-    }
+    },
+    headers: {
+        Authorization: `Token ${store.token}`
+      }
   }).then(() => {
     router.push({ name: 'ArticleView' })
   }).catch(err => console.log(err))
