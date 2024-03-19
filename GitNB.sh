@@ -10,7 +10,10 @@ git_repo_path="C:\Users\seom\Desktop\SSAFY_SEOM"
 cd "$git_repo_path"
 git pull origin main
 git add .
-git commit -m '1'
+
+read -p "Enter commit message: " commit_message
+git commit -m "$commit_message"
+
 git push origin main
 
 read -p "Press Enter to exit"
