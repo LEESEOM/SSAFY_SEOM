@@ -1,23 +1,23 @@
-Vue language Features (Volar)
-Vue 3 Snippets
-TypeScript Vue Plugin (Volar)
-TODO Highlight
-Test Runner For Java
-Tailwind CSS IntelliSense
-Prettier - Code formatter
-PostCSS Language Support
-Path Intellisense
-open in browser
-Maven for Java
-Material Icon Theme
-Live Server
-JavaScript and TypeScript Nightly
-JavaScript (ES6) code snippets
-IntelliCode API Usage Examples
-IntelliCode
-Highlight Matching Tag
-Extension Pack for Java
-ESLint
-Debugger for java
 Auto Rename Tag
+Debugger for java
+ESLint
+Extension Pack for Java
+Highlight Matching Tag
+IntelliCode
+IntelliCode API Usage Examples
+JavaScript (ES6) code snippets
+JavaScript and TypeScript Nightly
 Language Support for Java(TM) by Red Hat
+Live Server
+Material Icon Theme
+Maven for Java
+open in browser
+Path Intellisense
+PostCSS Language Support
+Prettier - Code formatter
+Tailwind CSS IntelliSense
+Test Runner For Java
+TODO Highlight
+Vue - Official
+Vue 3 Snippets
+Vue VSCode Snippets
